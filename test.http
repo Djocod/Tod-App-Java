@@ -1,0 +1,21 @@
+### Créer une tâche
+POST http://localhost:8080/api/tasks
+Content-type : application/json
+
+{"title": "Apprendre", "completed": false }
+
+
+### Lire toutes les tâches
+GET http://localhost:8080/api/tasks
+
+### Terminer la tâche 1
+PUT http://localhost:8080/api/tasks/3
+Content-type : application/json
+
+{"title": "Apprendre", "completed": true }
+
+### Supprimer la tâche 1
+DELETE http://localhost:8080/api/tasks/3
+
+
+http://localhost:4200
