@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>TODO</h1>
+  <div class="add-from">
+    <input
+      [(ngModel)]="newTask.title"
+      placeholder="Nouvelle tâche..."
+      (keydown.enter)="addTask(); $event.preventDefault()"
+    />
+    <button (click)="addTask()">Ajouer</button>
+  </div>
+  <div class="filters">
+    <button (click)="filter = 'all'" [class.active]="filter === 'all'">Toutes</button>
+    <button (click)="filter = 'active'" [class.active]="filter === 'active'">À faire</button>
+    <button (click)="filter = 'done'" [class.active]="filter === 'done'">Terminés</button>
+  </div>
+  <ul class="task-list">
+    <li *ngFor="let task of filteredTask" [class.done]="task.completed">
+      <input type="checkbox" [checked]="task.completed" (change)="toggleComplete(task)" />
+      <span>{{ task.title }}</span>
+      <button class="del" (click)="deleteTask(task.id!)">
+        <i class="fa-solid fa-x"></i>
+      </button>
+    </li>
+  </ul>
+  <p class="count">{{ remaining }} tâche(s) restante(s)</p>
+</div>

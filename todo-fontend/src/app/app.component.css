@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .add-from {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0);
+
+    input {
+      width: 70%;
+      padding: 10px;
+      border: none;
+      background: transparent;
+      border-radius: 20px;
+      outline: none;
+    }
+    input::placeholder {
+      color: rgb(0, 0, 0);
+      opacity: 0.2;
+    }
+
+    button {
+      width: 30%;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      background: transparent;
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+      background: red;
+    }
+  }
+
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      background: transparent;
+      .fa-solid {
+        color: rgb(0, 0, 0);
+        font-size: 1.2rem;
+      }
+    }
+    .active {
+      background: red;
+    }
+  }
+  .task-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    list-style: none;
+
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 10px;
+
+      span {
+        text-align: left;
+        margin: 0px 10px;
+      }
+      .del {
+        display: flex;
+        justify-content: center;
+        padding: 6px 5px;
+        border-radius: 100px;
+        border: 1px solid red;
+        background: transparent;
+        text-align: center;
+        .fa-solid {
+          color: rgb(0, 0, 0);
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+}
