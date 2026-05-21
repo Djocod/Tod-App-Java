@@ -1,0 +1,9 @@
+[build]
+  base = "todo-fontend"
+  command = "npm run build"
+  publish = "dist/todo-fontend/browser"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
